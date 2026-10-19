@@ -1,0 +1,22 @@
+{
+  "name": "dizoda-furniture-engine",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && npm run preview",
+    "preview": "python3 -m http.server 4173 --bind 127.0.0.1 --directory dist",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "python3 tests/browser.py",
+    "photos": "npm run build && python3 scripts/render-photos.py",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name dizoda-furniture-engine --branch main"
+  },
+  "dependencies": {
+    "pdfjs-dist": "6.4.299",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "wrangler": "4.151.3"
+  }
+}
