@@ -1,0 +1,6 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dizoda-furniture-engine",
+  "pages_build_output_dir": "dist",
+  "compatibility_date": "2026-10-20"
+}
