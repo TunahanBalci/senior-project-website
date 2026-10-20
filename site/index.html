@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Dizoda Furniture Engine: room capture in augmented reality, furniture arrangements at real size and placement checks. A senior project by Tunahan Balcı and Berre Yazgı.">
+    <meta property="og:title" content="Dizoda Furniture Engine">
+    <meta property="og:description" content="Room capture, furniture arrangements and placement checks.">
+    <meta property="og:type" content="website">
+    <title>Dizoda Furniture Engine</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="topbar">
+      <a class="brand" href="/">Dizoda Furniture Engine</a>
+      <nav class="links" aria-label="Site">
+        <a href="/" aria-current="page">Features</a>
+        <a href="/documents/">Documents</a>
+        <a href="https://dizoda.com" target="_blank" rel="noopener noreferrer">dizoda.com <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+    <main id="main" class="page">
+      <header class="title">
+        <h1>Dizoda Furniture Engine</h1>
+      </header>
+      <p class="abstract">Dizoda redesigns rooms with furniture that can be bought and shows each design on a photo of the room. Design tools that see only the image place furniture by eye: a sofa can end up longer than its wall or a table in front of the door, and nothing in the picture warns about it. Dizoda Furniture Engine is the mobile application that ties each design to the room's real measurements, so every piece in the photo stands where it would actually fit.</p>
+
+      <section class="feature" aria-labelledby="capture-title">
+        <h2 id="capture-title"><span>1</span> Room capture</h2>
+        <p>The phone measures the room in augmented reality. Two taps along the base of a wall trace it, and corners are found where walls meet, even behind furniture. Ceiling height, doors, windows and furniture that stays are marked the same way, and the photo is taken in the same session.</p>
+        <figure class="figure" id="capture-figure"><img src="/photos/capture.jpg" alt="The room before capture, with the armchair that stays" width="1200" height="800"></figure>
+      </section>
+
+      <section class="feature" aria-labelledby="arrangements-title">
+        <h2 id="arrangements-title"><span>2</span> Arrangements</h2>
+        <p>The engine places each piece using its real width, depth and height and offers up to three distinct layouts. Related pieces stay together, such as a coffee table in front of a sofa, and positions visible in the photo are preferred. Numbers in the photo match the plan. Pieces that do not fit are listed with the reason; missing sizes are reported, never guessed.</p>
+        <figure class="figure" id="arrangement-figure"><img src="/photos/layout-1.jpg" alt="The first layout: sofa against the photographed wall, coffee table in front, bookcase on the left wall" width="1200" height="800"></figure>
+      </section>
+
+      <section class="feature" aria-labelledby="checks-title">
+        <h2 id="checks-title"><span>3</span> Placement checks</h2>
+        <p>Every layout keeps pieces inside the room, prevents overlaps in three dimensions, keeps door swings and windows clear and leaves a path at least 60 cm wide from the door to every piece. Pieces can be moved and rotated on the plan; each change is checked at once, and an edited layout can be sent back for a new photo.</p>
+        <figure class="figure" id="checks-figure"><img src="/photos/layout-3.jpg" alt="The third layout: sofa under the window" width="1200" height="800"></figure>
+      </section>
+
+      <section class="team" aria-labelledby="team-title">
+        <h2 id="team-title">Meet the Team</h2>
+        <div class="team-groups">
+          <div class="team-group">
+            <h3>Project advisor</h3>
+            <ul class="people">
+            <li class="person"><span class="portrait" data-initials="MC"><img src="/team/mehmet-evren-coskun.jpg" alt="" width="400" height="500" loading="lazy"></span><span class="name">Asst. Prof. Dr. Mehmet Evren Coşkun</span><span class="role">Computer Engineering</span></li>
+            </ul>
+          </div>
+          <div class="team-group">
+            <h3>Jury members</h3>
+            <ul class="people">
+            <li class="person"><span class="portrait" data-initials="AB"><img src="/team/aysenur-birturk.jpg" alt="" width="400" height="500" loading="lazy"></span><span class="name">Dr. Ayşenur Birtürk</span><span class="role">Software Engineering</span></li>
+            <li class="person"><span class="portrait" data-initials="EU"><img src="/team/eren-ulu.jpg" alt="" width="400" height="500" loading="lazy"></span><span class="name">Dr. Eren Ulu</span><span class="role">Computer Engineering</span></li>
+            </ul>
+          </div>
+          <div class="team-group">
+            <h3>Team members</h3>
+            <ul class="people">
+            <li class="person"><span class="portrait" data-initials="TB"><img src="/team/tunahan_balci.jpg" alt="" width="400" height="500" loading="lazy"></span><span class="name">Tunahan Balcı</span></li>
+            <li class="person"><span class="portrait" data-initials="BY"><img src="/team/berre_yazgi.jpg" alt="" width="400" height="500" loading="lazy"></span><span class="name">Berre Yazgı</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="foot">A senior project · Furniture Engine is a subsystem of Dizoda.</footer>
+  </body>
+</html>
