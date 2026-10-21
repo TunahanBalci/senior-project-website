@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { copyFileSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { copyFileSync, existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -45,4 +45,13 @@ test("the build refuses to clear the project or its sources", () => {
   }
   assert.equal(safeOutput(join(root, "dist"), root), join(root, "dist"));
   assert.equal(safeOutput(join(tmpdir(), "dizoda-out"), root), join(tmpdir(), "dizoda-out"));
+});
+
+test("every image the pages reference is in the build", () => {
+  build(fixtures, out => {
+    for (const page of ["index.html", "documents/index.html", "404.html"]) {
+      const html = readFileSync(join(out, page), "utf8");
+      for (const [, src] of html.matchAll(/<img[^>]+src="\/([^"]+)"/g)) assert.ok(existsSync(join(out, src)), `${page} → /${src}`);
+    }
+  });
 });
